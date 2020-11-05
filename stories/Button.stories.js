@@ -1,4 +1,4 @@
-import Component from '../packages/button/Button.svelte';
+import Component from '../packages/button';
 
 export default {
   title: 'Button',
@@ -7,7 +7,10 @@ export default {
 // default task state
 export const Default = () => ({
   Component,
-  props: {},
+  props: {
+    variant: 'raised',
+  },
   on: {
+    click: () => alert('Clicked!')
   },
 });
